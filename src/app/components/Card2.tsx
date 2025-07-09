@@ -2,7 +2,7 @@ import { IoTriangle } from "react-icons/io5";
 import graph from "../assets/img/_Stocks Line Chart.png"
 
 const Card2 = () => {
-    const stats = ["+0.37", "+0.09%"];
+ 
   return (
     <div className="bg-[#040404] p-8 rounded-xl shadow-md text-center  w-[300px]">
         <div className="flex  mb-4">
@@ -19,6 +19,7 @@ const Card2 = () => {
             </section>
           </div>
         </div>
+        
         <div>
             <img src={graph.src} alt="" />
         </div>

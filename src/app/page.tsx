@@ -6,10 +6,10 @@ import Card4 from "./components/Card4";
 export default function Home() {
 
   const cards = [
-    { title: "Retail product", description: "View price quotes and track performance of a product throughout the week" },
-    { title: "Retail product & news", description: "View price quotes, track performance and latest news of a product throughout the week" },
-    { title: "Watchlist", description: "View price quotes and track performance of watchlist throughout the week" },
-    { title: "Watchlist & news", description: "View price quotes, track performance and latest news of watchlist throughout the week" },
+    { title: "Retail product", description: "View price quotes and track performance of a product throughout the week" , card: Card1},
+    { title: "Retail product & news", description: "View price quotes, track performance and latest news of a product throughout the week" , card: Card2},
+    { title: "Watchlist", description: "View price quotes and track performance of watchlist throughout the week", card: Card3 },
+    { title: "Watchlist & news", description: "View price quotes, track performance and latest news of watchlist throughout the week", card: Card4 },
   ];
   return (
     <div className="flex min-h-screen bg-[#040404]">
@@ -31,7 +31,7 @@ export default function Home() {
            
               <p className="text-[.706rem] font-light mb-7">{card.description}</p>
               </div>
-              <Card1/>
+              <card.card/>
             </div>
             
           ))}
