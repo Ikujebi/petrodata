@@ -2,15 +2,12 @@
 
 import { ReactNode } from "react";
 import { FaExchangeAlt } from "react-icons/fa";
-
-import { GoCommentDiscussion } from "react-icons/go";
 import { CiFileOn } from "react-icons/ci";
-
 import { CiSearch } from "react-icons/ci";
 import { SlPlane } from "react-icons/sl";
 import { LuWarehouse } from "react-icons/lu";
 import { LuNewspaper } from "react-icons/lu";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname,  } from "next/navigation";
 import { LuTag } from "react-icons/lu";
 import Link from "next/link";
 
@@ -25,7 +22,7 @@ interface NavItem {
 }
 
 const Sidebar: React.FC = () => {
-  const router = useRouter();
+  // const router = useRouter();
   const pathname = usePathname();
 
   const navItems: NavItem[] = [
