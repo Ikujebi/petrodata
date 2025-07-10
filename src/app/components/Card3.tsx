@@ -1,31 +1,67 @@
 import { IoTriangle } from "react-icons/io5";
-import graph from "../assets/img/_Stocks Line Chart.png"
 
 const Card2 = () => {
-    const stats = ["+0.37", "+0.09%"];
   return (
-    <div className="bg-[#040404] p-8 rounded-xl shadow-md text-center  w-[300px]">
-        <div className="flex  mb-4">
+    <div className="bg-[#040404] p-8 rounded-xl shadow-md text-center w-[300px]">
+      {[
+        {
+          name: "PMS",
+          full: "Premium Motor Spirit",
+          price: "₦714.26",
+          change: "+0.09%",
+          changeColor: "text-green-500",
+          iconColor: "text-green-500",
+        },
+        {
+          name: "AGO",
+          full: "Automotive Gas Oil",
+          price: "₦1249.06",
+          change: "-9.01",
+          changeColor: "text-red-500",
+          iconColor: "text-red-500",
+        },
+        {
+          name: "ICE",
+          full: "ICE Brent Crude",
+          price: "₦0.00",
+          change: "0.00",
+          changeColor: "text-green-500",
+          iconColor: "text-green-500",
+        },
+        {
+          name: "DPK",
+          full: "Dual Purpose Kerosene",
+          price: "₦1088.92",
+          change: "-50.90",
+          changeColor: "text-red-500",
+          iconColor: "text-red-500",
+        },
+      ].map((fuel, i) => (
+        <div key={i} className="flex mb-2 text-[.8rem]">
           <div className="flex justify-between w-full">
+            {/* Left Side */}
             <section>
               <article className="flex text-gray-100 items-start">
-                <IoTriangle className="text-green-500 text-[.7rem] mix-blend-normal mt-2" />
-                <h2 className="ml-1 ">PMS</h2>
+                <IoTriangle className={`${fuel.iconColor} text-[.6rem] mix-blend-normal mt-1`} />
+                <h2 className="ml-1">{fuel.name}</h2>
               </article>
-              
+              <article className="font-thin text-white text-[.7rem]">
+                {fuel.full}
+              </article>
             </section>
-            <section >
-            <p>N714.26</p>
+
+            {/* Right Side (Bottom Aligned) */}
+            <section className="flex flex-col justify-end items-end">
+              <p>{fuel.price}</p>
+              <p className={`flex font-light ${fuel.changeColor} items-start text-[.9rem]`}>
+                {fuel.change}
+              </p>
             </section>
           </div>
         </div>
-        <div>
-            <img src={graph.src} alt="" />
-        </div>
-        <h2 className="text-4xl font-bold mt-[2rem] text-white">N714.26</h2>
-        
-      </div>
-  )
-}
+      ))}
+    </div>
+  );
+};
 
-export default Card2
+export default Card2;

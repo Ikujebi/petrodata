@@ -1,9 +1,12 @@
-import { IoTriangle } from "react-icons/io5";
-import news from "../assets/News Icon.png";
 import Image from "next/image";
+import { IoTriangle } from "react-icons/io5";
+import chart1 from "../assets/img/Stroke1.png"
+import chart2 from "../assets/img/Stroke2.png"
+import chart3 from "../assets/img/Stroke3.png"
+import chart4 from "../assets/img/Stroke4.png"
 const Card2 = () => {
   return (
-    <div className="bg-[#040404] p-8 rounded-xl shadow-md text-center w-[300px]">
+    <div className="bg-[#040404] p-2 rounded-xl shadow-md text-center w-[14rem]">
       {[
         {
           name: "PMS",
@@ -12,6 +15,7 @@ const Card2 = () => {
           change: "+0.09%",
           changeColor: "text-green-500",
           iconColor: "text-green-500",
+          image: chart1
         },
         {
           name: "AGO",
@@ -20,6 +24,7 @@ const Card2 = () => {
           change: "-9.01",
           changeColor: "text-red-500",
           iconColor: "text-red-500",
+          image: chart2
         },
         {
           name: "ICE",
@@ -28,43 +33,44 @@ const Card2 = () => {
           change: "0.00",
           changeColor: "text-green-500",
           iconColor: "text-green-500",
+          image: chart3
         },
-       
+        {
+          name: "DPK",
+          full: "Dual Purpose Kerosene",
+          price: "₦1088.92",
+          change: "-50.90",
+          changeColor: "text-red-500",
+          iconColor: "text-red-500",
+          image: chart4
+        },
       ].map((fuel, i) => (
-        <div key={i} className="flex mb-2 text-[.8rem]">
+        <div key={i} className="flex mb-2 text-[.5rem]">
           <div className="flex justify-between w-full">
-            {/* Left Side */}
+           
             <section>
               <article className="flex text-gray-100 items-start">
-                <IoTriangle className={`${fuel.iconColor} text-[.6rem] mix-blend-normal mt-1`} />
+                <IoTriangle className={`${fuel.iconColor} text-[.3rem] mix-blend-normal mt-1`} />
                 <h2 className="ml-1">{fuel.name}</h2>
               </article>
-              <article className="font-thin text-white text-[.7rem]">
+              <article className="font-thin text-white text-[.4rem]">
                 {fuel.full}
               </article>
             </section>
 
-
+            <div className="mx-2 mt-1" >
+            <Image src={fuel.image} alt="chart" width={50} height={30} />
+          </div>
+            
             <section className="flex flex-col justify-end items-end">
-              <p className="text-[.8rem]">{fuel.price}</p>
-              <p className={`flex font-light ${fuel.changeColor} items-start text-[.8rem]`}>
+              <p className="text-white">{fuel.price}</p>
+              <p className={`flex font-light ${fuel.changeColor} items-start text-[.5rem]`}>
                 {fuel.change}
               </p>
             </section>
           </div>
-          
         </div>
       ))}
-        <div className=" text-left">
-        <div className="flex items-center gap-2 ">
-          <Image height={1000} width={1000} src={news.src} alt="News icon" className="w-3 " />
-          <p className="text-[.78rem] text-[#737373]">Vanguard</p>
-        </div>
-
-        <h2 id="h1" className="text-[.85rem] font-bold text-white">
-          Heirs Energies doubles oil production - Official...
-        </h2>
-      </div>
     </div>
   );
 };
