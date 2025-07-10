@@ -4,7 +4,7 @@ import Image from "next/image";
 const Card1 = () => {
     const stats = ["+0.37", "+0.09%"];
   return (
-    <div className="bg-[#040404] p-8 rounded-xl shadow-md text-center  w-[300px]">
+    <div className="bg-[#040404] p-2 rounded-xl shadow-md text-center  lg:w-[18.7rem]">
         <div className="flex  mb-4">
           <div className="flex justify-between w-full">
             <section>
@@ -12,7 +12,7 @@ const Card1 = () => {
                 <IoTriangle className="text-green-500 text-[.6rem] mix-blend-normal mt-1" />
                 <h2 className="ml-1 ">PMS</h2>
               </article>
-              <article className="font-thin text-white text-[.7rem]">
+              <article className="font-thin text-white text-[.6rem]  lg:text-[.7rem]">
                 Premium Motor Spirit
               </article>
             </section>

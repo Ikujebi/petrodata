@@ -3,7 +3,7 @@ import news from "../assets/News Icon.png";
 import Image from "next/image";
 const Card2 = () => {
   return (
-    <div className="bg-[#040404] p-8 rounded-xl shadow-md text-center w-[300px]">
+    <div className="bg-[#040404] p-2 rounded-xl shadow-md text-center lg:w-[18.7rem]">
       {[
         {
           name: "PMS",
@@ -61,7 +61,7 @@ const Card2 = () => {
           <p className="text-[.78rem] text-[#737373]">Vanguard</p>
         </div>
 
-        <h2 id="h1" className="text-[.85rem] font-bold text-white">
+        <h2 id="h1" className="lg:text-[.85rem]  text-[.7rem] font-bold text-white">
           Heirs Energies doubles oil production - Official...
         </h2>
       </div>

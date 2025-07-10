@@ -2,7 +2,7 @@ import { IoTriangle } from "react-icons/io5";
 
 const Card2 = () => {
   return (
-    <div className="bg-[#040404] p-8 rounded-xl shadow-md text-center w-[300px]">
+    <div className="bg-[#040404] p-2 rounded-xl shadow-md text-center lg:w-[18.7rem]">
       {[
         {
           name: "PMS",
