@@ -1,21 +1,22 @@
+"use client";
 import Sidebar from "./components/SideBar";
 import Done from "./components/Done";
-import Product from "./components/Product";
+import { useMainContent } from "./hooks/useMainContent"; // adjust path if needed
 
 export default function Home() {
+  const { activeItem, setActiveItem, renderContent } = useMainContent();
+
   return (
     <div className="flex min-h-screen bg-[#040404]">
       <aside className="w-[15rem]">
-        <Sidebar />
+        <Sidebar activeItem={activeItem} setActiveItem={setActiveItem} />
       </aside>
 
       <div className="flex w-full">
-        {/* Main content: 65% */}
         <main className="w-[65%] p-6 ml-[2rem]">
-          <Product />
+          {renderContent()}
         </main>
 
-        {/* Done component: 35% */}
         <div className="w-[35%] p-6">
           <Done />
         </div>
