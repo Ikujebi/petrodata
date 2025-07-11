@@ -1,26 +1,18 @@
-"use client";
+import Done1 from "../components/done/Done1"
+import Done2 from "../components/done/Doneg2"
+import Done3 from "../components/done/Done3h1"
+import Done4 from "../components/done/Done4"
 
-import Image from "next/image";
-
-import warehouse from "../assets/img/warehouse.png";
-
-const Card2 = () => {
+const Done = () => {
   return (
-    <div className="bg-[#040404] p-2 rounded-xl shadow-md text-center w-[14rem]">
-      <div className="flex items-center">
-        <div className="bg-white rounded-full flex justify-center items-center h-3 w-3">
-          <Image
-            height={100}
-            width={200}
-            src={warehouse.src}
-            alt="Depot icon"
-            className="w-2 h-2 object-contain"
-          />
-        </div>
-        <p className="text-white text-[.45rem] mt-[.1rem] pl-1 mb-[.5rem]">Depot</p>
-      </div>
-    </div>
-  );
-};
+    <div className='grid grid-cols-2 gap-2'>
+<div className="m-0 p-0"><Done1 /></div>
+<div className="m-0 p-0"><Done2 /></div>
+<div className="m-0 p-0"><Done3 /></div>
+<div className="m-0 p-0"><Done4 /></div>
 
-export default Card2;
+    </div>
+  )
+}
+
+export default Done

@@ -39,15 +39,15 @@ const Card2 = () => {
                 <IoTriangle className={`${fuel.iconColor} text-[.6rem] mix-blend-normal mt-1`} />
                 <h2 className="ml-1">{fuel.name}</h2>
               </article>
-              <article className="font-thin text-white text-[.7rem]">
+              <article className="font-thin text-white lg:text-[.7rem] text-[.6rem]">
                 {fuel.full}
               </article>
             </section>
 
 
-            <section className="flex flex-col justify-end items-end">
-              <p className="text-[.8rem]">{fuel.price}</p>
-              <p className={`flex font-light ${fuel.changeColor} items-start text-[.8rem]`}>
+            <section className="flex flex-col justify-end items-end text-[.6rem] lg:text-[.8rem]">
+              <p className="">{fuel.price}</p>
+              <p className={`flex font-light ${fuel.changeColor} items-start `}>
                 {fuel.change}
               </p>
             </section>

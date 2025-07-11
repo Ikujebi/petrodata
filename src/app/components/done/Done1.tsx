@@ -1,12 +1,12 @@
 import Image from "next/image";
 import { IoTriangle } from "react-icons/io5";
-import chart1 from "../assets/img/Stroke1.png"
-import chart2 from "../assets/img/Stroke2.png"
-import chart3 from "../assets/img/Stroke3.png"
-import chart4 from "../assets/img/Stroke4.png"
+import chart1 from "../../assets/img/Stroke1.png"
+import chart2 from "../../assets/img/Stroke2.png"
+import chart3 from "../../assets/img/Stroke3.png"
+import chart4 from "../../assets/img/Stroke4.png"
 const Card2 = () => {
   return (
-    <div className="bg-[#040404] p-2 rounded-xl shadow-md text-center w-[14rem]">
+    <div className="bg-[#040404] p-2 rounded-xl shadow-md text-center w-full">
       {[
         {
           name: "PMS",
@@ -45,7 +45,7 @@ const Card2 = () => {
           image: chart4
         },
       ].map((fuel, i) => (
-        <div key={i} className="flex mb-2 text-[.5rem]">
+        <div key={i} className="flex mb-2 text-[.4rem] lg:text-[.5rem]">
           <div className="flex justify-between w-full">
            
             <section>
@@ -53,7 +53,7 @@ const Card2 = () => {
                 <IoTriangle className={`${fuel.iconColor} text-[.3rem] mix-blend-normal mt-1`} />
                 <h2 className="ml-1">{fuel.name}</h2>
               </article>
-              <article className="font-thin text-white text-[.4rem]">
+              <article className="font-thin text-white text-[.15rem] lg:text-[.4rem]">
                 {fuel.full}
               </article>
             </section>
@@ -62,9 +62,9 @@ const Card2 = () => {
             <Image src={fuel.image} alt="chart" width={50} height={30} />
           </div>
             
-            <section className="flex flex-col justify-end items-end">
-              <p className="text-white">{fuel.price}</p>
-              <p className={`flex font-light ${fuel.changeColor} items-start text-[.5rem]`}>
+            <section className="flex flex-col justify-end items-end text-[.3rem] lg:text-[.5rem]">
+              <p className="text-white ">{fuel.price}</p>
+              <p className={`flex font-light ${fuel.changeColor} items-start `}>
                 {fuel.change}
               </p>
             </section>

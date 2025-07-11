@@ -31,7 +31,7 @@ const Card1 = () => {
         <div>
             <Image width={200} height={100} src={graph.src} alt="" />
         </div>
-        <h2 className="text-4xl font-bold mt-[2rem] text-white">N714.26</h2>
+        <h2 className="text-2xl font-bold mt-[2rem] text-white">N714.26</h2>
         
       </div>
   )

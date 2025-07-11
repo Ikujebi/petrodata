@@ -63,7 +63,7 @@ const Sidebar: React.FC = () => {
       <div className="flex flex-wrap pl-1 gap-4  items-center ">
         
         <div className="flex mt-[1.5rem] items-center gap-2 rounded-xl border bg-gray-600 px-3 py-1 w-[90%] max-w-md">
-          <CiSearch className="text-gray-500 text-lg" />
+          <CiSearch className="text-[#a3a3a3] text-lg" />
           <input
             type="search"
             placeholder="Search..."

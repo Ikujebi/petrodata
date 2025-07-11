@@ -37,7 +37,7 @@ const Card2 = () => {
           iconColor: "text-red-500",
         },
       ].map((fuel, i) => (
-        <div key={i} className="flex mb-2 text-[.8rem]">
+        <div key={i} className="flex mb-2 lg:text-[.8rem] ">
           <div className="flex justify-between w-full">
             {/* Left Side */}
             <section>
