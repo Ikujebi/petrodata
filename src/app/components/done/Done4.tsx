@@ -32,14 +32,14 @@ const Card2 = () => {
               className="w-2 h-2 object-contain"
             />
           </div>
-          <p className="text-white text-[.5rem] pl-1">284,774</p>
+          <p className="text-white text-[.2rem] lg:text-[.5rem] pl-1">284,774</p>
           <div className="text-[#a3a3a3] font-thin flex gap-1 mt-1">
-            <p className="text-white text-[.45rem] mt-[.1rem] pl-1">Flights</p>
+            <p className="text-white text-[.15rem] lg:text-[.45rem] mt-[.1rem] pl-1">Flights</p>
             <article className="flex text-gray-100 items-start">
-              <IoTriangle className="text-[#027a48] text-[.3rem] mt-1" />
-              <h2 className="ml-1 text-[#027a48] text-[.7rem]">15%</h2>
+              <IoTriangle className="text-[#027a48] text-[.15rem] lg:text-[.3rem] mt-1" />
+              <h2 className="ml-1 text-[#027a48] text-[.15rem] lg:text-[.7rem]">15%</h2>
             </article>
-            <p className="text-white text-[.45rem]">last week</p>
+            <p className="text-white text-[.15rem] lg:text-[.45rem]">last week</p>
           </div>
         </div>
 
@@ -67,7 +67,7 @@ const Card2 = () => {
         {/* Labels */}
         <section className="flex justify-between px-2 mt-1 w-[50%]">
           <p
-            className={`cursor-pointer text-[.45rem] ${
+            className={`cursor-pointer text-[.15rem] lg:text-[.45rem] ${
               selected === "International" ? "text-[#009688]" : "text-white"
             }`}
             onClick={() => setSelected("International")}
@@ -75,7 +75,7 @@ const Card2 = () => {
             International
           </p>
           <p
-            className={`cursor-pointer text-[.45rem] ${
+            className={`cursor-pointer text-[.15rem] lg:text-[.45rem] ${
               selected === "Domestic" ? "text-[#009688]" : "text-white"
             }`}
             onClick={() => setSelected("Domestic")}
@@ -86,9 +86,9 @@ const Card2 = () => {
       </div>
 
       {/* Right card */}
-      <div className="bg-[#404040] p-2 rounded-e-xl text-white text-[.5rem] space-y-2 overflow-y-auto max-h-[16rem] w-[40%]">
+      <div className="bg-[#404040] px-1 lg:px-0 lg:p-2 rounded-e-xl text-white text-[.13rem] lg:text-[.5rem] lg:space-y-2 overflow-y-auto lg:max-h-[16rem] w-[40%]">
         {airport.map((item, index) => (
-          <div key={index} className="flex justify-between items-start mt-3 space-y-1">
+          <div key={index} className="flex justify-between items-start mt-1 lg:mt-3 lg:space-y-1">
             <div className="flex-1 pr-2">
               <p className="font-semibold">{item.name}</p>
             </div>

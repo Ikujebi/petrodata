@@ -147,7 +147,7 @@ const Card2 = () => {
           <p
             key={item}
             onClick={() => setSelected(item)}
-            className={`cursor-pointer text-[.45rem] ${
+            className={`cursor-pointer text-[.2rem] lg:text-[.45rem] ${
               selected === item ? "text-[#009688]" : "text-white"
             }`}
           >
