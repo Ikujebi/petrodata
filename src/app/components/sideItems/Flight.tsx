@@ -2,8 +2,8 @@
 import { useState } from "react";
 import Image from "next/image";
 import { IoTriangle } from "react-icons/io5";
-import flight from "../assets/img/Flight icon (2).png";
-import graph from "../assets/img/Group 6.png";
+import flight from "../../assets/img/Flight icon (2).png";
+import graph from "../../assets/img/Group 6.png";
 
 const Done4L = () => {
     const [selected, setSelected] = useState<"International" | "Domestic">("International");

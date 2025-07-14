@@ -1,5 +1,5 @@
-import Card1 from "../components/Flight";
-import Card2 from "../components/Card2";
+import Card1 from "../components/sideItems/Flight";
+import Card2 from "../components/sideItems/Deposit";
 import Card3 from "../components/Card3";
 import Card4 from "../components/Card4";
 
