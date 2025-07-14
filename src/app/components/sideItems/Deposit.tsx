@@ -23,7 +23,7 @@ const Card2 = () => {
                 <IoTriangle className="text-green-500 text-[.6rem] mix-blend-normal mt-1" />
                 <h2 className="ml-1 ">NIPCO</h2>
               </article>
-              <p className="text-gray-300 text-[.8rem]">Lagos</p>
+              <p className="text-gray-300 text-[.75rem]">Lagos</p>
           </section>
         </div>
       </div>
