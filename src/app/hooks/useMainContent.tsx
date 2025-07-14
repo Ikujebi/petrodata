@@ -1,8 +1,7 @@
-// hooks/useMainContent.tsx
-
 import { useState } from "react";
 import Product from "../components/Product";
 import Card5 from "../components/Card1";
+import CardWrapper from "../components/CardWrapper";
 import { cards } from "../config/cardConfig";
 
 export function useMainContent() {
@@ -17,10 +16,17 @@ export function useMainContent() {
       return <Card5 />;
     }
 
+    // Find the matching card config item
     const match = cards.find((card) => card.title === activeItem);
     if (match) {
-      const CardComponent = match.card;
-      return <CardComponent />;
+      return (
+        <CardWrapper
+          title={match.title}
+          description={match.description}
+          description2={match.description2}
+          card={<match.card />}
+        />
+      );
     }
 
     return <Product />; // fallback

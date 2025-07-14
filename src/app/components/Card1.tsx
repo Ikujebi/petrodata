@@ -4,7 +4,7 @@ import Image from "next/image";
 const Card1 = () => {
     const stats = ["+0.37", "+0.09%"];
   return (
-    <div className="bg-[#040404] p-2 rounded-xl shadow-md text-center  lg:w-[18.7rem]">
+    <div className="bg-[#040404] p-2  shadow-md text-center  lg:w-[18.7rem]">
         <div className="flex  mb-4">
           <div className="flex justify-between w-full">
             <section>
