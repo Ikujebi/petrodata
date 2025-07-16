@@ -1,10 +1,17 @@
+import { useState } from "react";
 import warehouse from "../../assets/img/warehouse.png"
 import graph from "../../assets/img/_Stocks Line Chart.png";
-import news from "../../assets/News Icon.png";
+
 import Image from "next/image";
 import { IoTriangle } from "react-icons/io5";
 
+type FuelCategory = "PMS" | "AGO" | "DPK" | "ICE" | "LPG";
+
 const Card2 = () => {
+    const [selected, setSelected] = useState<FuelCategory  | null>(null);
+    const stats = ["+0.37", "+0.09%"];
+    const categories: FuelCategory[] = ["PMS", "AGO", "DPK", "ICE", "LPG"];
+
   return (
     <div className="bg-[#040404] p-2 rounded-xl shadow-md text-center lg:w-[18.7rem]">
       
@@ -35,16 +42,51 @@ const Card2 = () => {
 
    
       <div className="mt-4 text-left">
-        <div className="flex items-center gap-2 mb-2">
-          <Image width={200} height={100} src={news.src} alt="News icon" className="w-3 mt-1" />
-          <p className="text-[.78rem] text-[#737373]">Vanguard</p>
+     <div className="flex justify-between w-full">
+                 <section>
+                 <h2 className="text-2xl font-bold mt-1 text-white">N714.26</h2>
+                 </section>
+                 <section >
+                 {stats.map((value, index) => (
+                     <article
+                       key={index}
+                       className="flex font-light text-green-500 items-start text-[.72rem]"
+                     >
+                       {value}
+                     </article>
+                   ))}
+                 </section>
+               </div>
+             </div>
+             <div className="relative w-full h-[1px] bg-white mt-3">
+        {/* Green overlay only when item is selected */}
+        <div className="absolute inset-0 flex justify-between px-2 w-[50%]">
+          {categories.map((item) => (
+            <div key={item} className="w-4 flex justify-center relative ">
+              {selected === item && (
+                <div className="h-[3px] bg-[#009688] w-full absolute top-1/2 -translate-y-1/2 rounded-sm" />
+              )}
+            </div>
+          ))}
         </div>
-
-        <h2 id="h1" className="lg:text-[.95rem] text-[.7rem] font-bold text-white">
-          Heirs Energies doubles oil production - Official...
-        </h2>
       </div>
-    </div>
+
+      {/* Labels */}
+      <section className="flex justify-between px-2 mt-1 w-[50%]">
+        {categories.map((item) => (
+          <p
+            key={item}
+            onClick={() => setSelected(item)}
+            className={`cursor-pointer text-[.4rem] lg:text-[.65rem] ${
+              selected === item ? "text-[#009688]" : "text-white"
+            }`}
+          >
+            {item}
+          </p>
+        ))}
+      </section>
+      </div>
+    
   );
 };
 

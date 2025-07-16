@@ -1,7 +1,7 @@
 import Card1 from "../components/sideItems/Flight";
 import Card2 from "../components/sideItems/Deposit";
-import Card3 from "../components/Card3";
-import Card4 from "../components/Card4";
+import Card3 from "../components/sideItems/News";
+import Card4 from "../components/sideItems/Report";
 
 export const cards = [
   {
