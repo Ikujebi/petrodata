@@ -2,6 +2,7 @@ import Card1 from "../components/sideItems/Flight";
 import Card2 from "../components/sideItems/Deposit";
 import Card3 from "../components/sideItems/News";
 import Card4 from "../components/sideItems/Report";
+import Card5 from "../components/sideItems/Exchange";
 
 export const cards = [
   {
@@ -27,5 +28,10 @@ export const cards = [
     description: "Get comprehensive reports & insights",
     description2: "of watchlist throughout the week",
     card: Card4,
+  },
+  {
+    title: "Exchange rate",
+    description: "Get updates on new prices of dollar",
+    card: Card5,
   },
 ];
